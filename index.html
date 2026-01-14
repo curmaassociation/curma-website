@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CURMA | Central University of Rajasthan Malayali Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="CURMA logo" class="logo" />
+      <div>
+        <p class="eyebrow">Central University of Rajasthan</p>
+        <h1>CURMA</h1>
+        <p class="tagline">Malayali Association | Fresher helpdesk · Culture · Events</p>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#programs">Programs</a>
+      <a href="#social">Social Initiatives</a>
+      <a href="#sports">Sports</a>
+      <a href="#magazine">Magazine</a>
+      <a href="#committee">Committee</a>
+      <a href="#byelaw">Bye-Law</a>
+      <a href="#registration" class="pill">Fresher Registration</a>
+      <a href="#admin" class="ghost">Admin Login</a>
+    </nav>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Community • Culture • Care</p>
+      <h2>Central University of Rajasthan Malayali Association</h2>
+      <p class="lead">A vibrant home for Malayali students at CURAJ. We welcome freshers, celebrate Kerala heritage, and organize programs like Onam, Iftaar, and Vishu.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#registration">Register as Fresher</a>
+        <a class="btn ghost" href="#programs">Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div><span id="stat-members">100+</span><small>Active members</small></div>
+        <div><span id="stat-events">12</span><small>Events / year</small></div>
+        <div><span id="stat-years">2012</span><small>Founded</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float-card">
+        <p>Next up</p>
+        <h3 id="next-event">Onam 2025</h3>
+        <p class="tiny">Cultural night • Sadhya • Thiruvathira</p>
+      </div>
+      <div class="float-card">
+        <p>Helpdesk</p>
+        <h3>We guide CURAJ freshers</h3>
+        <p class="tiny">Housing · Travel · Campus life</p>
+      </div>
+      <div class="sun"></div>
+      <div class="palm"></div>
+    </div>
+  </main>
+
+  <section class="grid quick" aria-label="Quick links">
+    <div class="card">
+      <h3>Latest announcements</h3>
+      <ul id="announcements" class="bullet-list"></ul>
+    </div>
+    <div class="card">
+      <h3>Get started</h3>
+      <div class="quick-links">
+        <a href="#registration">Fresher form →</a>
+        <a href="#programs">Programs →</a>
+        <a href="#byelaw">Bye-law →</a>
+        <a href="#contact">Contact →</a>
+      </div>
+    </div>
+    <div class="card highlight">
+      <h3>Call for volunteers</h3>
+      <p>Join teams for cooking, decoration, stage, finance, media, and volunteering.</p>
+      <a class="btn primary" href="#registration">Register interest</a>
+    </div>
+  </section>
+
+  <section id="programs" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Flagship events</p>
+      <h2>Programs</h2>
+      <p>Onam is our marquee celebration inside campus, complemented by Iftaar and Vishu hosted across CURAJ and nearby communities.</p>
+    </div>
+    <div class="cards" id="program-cards"></div>
+  </section>
+
+  <section id="social" class="section alt">
+    <div class="section-head">
+      <p class="eyebrow">Community care</p>
+      <h2>Social Initiatives</h2>
+      <p>We extend Kerala warmth through service projects like the Blanket Challenge for campus workers.</p>
+    </div>
+    <div class="cards" id="social-cards"></div>
+  </section>
+
+  <section id="sports" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Ever Rolling Trophy</p>
+      <h2>Football</h2>
+      <p>Celebrating the CURMA football legacy with year-wise champions.</p>
+    </div>
+    <div class="table-wrap">
+      <table id="football-table">
+        <thead>
+          <tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Score / Highlights</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="gallery" id="football-gallery"></div>
+  </section>
+
+  <section id="magazine" class="section alt">
+    <div class="section-head">
+      <p class="eyebrow">CURMA Magazine</p>
+      <h2>Digital Editions</h2>
+      <p>Editorial notes, art, and stories from the CURMA community.</p>
+    </div>
+    <div class="cards" id="magazine-cards"></div>
+  </section>
+
+  <section id="committee" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Leadership</p>
+      <h2>Committee</h2>
+      <p>Year-wise teams steering CURMA with President, Secretary, Treasurer, and Executive Members.</p>
+    </div>
+    <div class="cards" id="committee-cards"></div>
+  </section>
+
+  <section id="byelaw" class="section alt">
+    <div class="section-head">
+      <p class="eyebrow">Governance</p>
+      <h2>Bye-Law</h2>
+      <p>Our constitution guiding membership, elections, finance, and conduct.</p>
+    </div>
+    <div class="card text">
+      <div id="byelaw-content"></div>
+      <a class="btn ghost" id="byelaw-download" href="#">Download PDF</a>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Memories</p>
+      <h2>Gallery</h2>
+      <p>Year-wise albums across programs.</p>
+    </div>
+    <div class="gallery" id="gallery-grid"></div>
+  </section>
+
+  <section id="registration" class="section alt">
+    <div class="section-head">
+      <p class="eyebrow">Join CURMA</p>
+      <h2>Fresher Registration</h2>
+      <p>Submit your details; admins will approve your membership.</p>
+    </div>
+    <form id="registration-form" class="form">
+      <div class="grid two">
+        <label>Full Name<input name="fullName" required /></label>
+        <label>Course<input name="course" required /></label>
+        <label>Department<input name="department" required /></label>
+        <label>Year / Batch<input name="year" placeholder="e.g., 2024-2026" required /></label>
+        <label>Phone Number<input name="phone" type="tel" required /></label>
+        <label>Email<input name="email" type="email" required /></label>
+        <label>WhatsApp Number<input name="whatsapp" type="tel" /></label>
+        <label>Hostel / Outside<input name="hostel" placeholder="Hostel / Outside" required /></label>
+        <label>Native Place<input name="nativePlace" placeholder="Kerala district" required /></label>
+        <label>Interests<select name="interests" multiple size="5">
+          <option>Cooking</option>
+          <option>Decoration</option>
+          <option>Stage</option>
+          <option>Coordination</option>
+          <option>Finance</option>
+          <option>Media</option>
+          <option>Volunteering</option>
+        </select></label>
+        <label>Photo Upload<input name="photo" type="file" accept="image/*" required /></label>
+      </div>
+      <button class="btn primary" type="submit">Submit for Approval</button>
+      <p class="tiny" id="form-status"></p>
+    </form>
+  </section>
+
+  <section id="admin" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Admin</p>
+      <h2>Admin Login</h2>
+      <p>Restricted to CURMA leadership. Approve members, manage programs, social initiatives, sports, and magazines.</p>
+    </div>
+    <form id="admin-login" class="form inline">
+      <label>Email<input name="adminEmail" type="email" required /></label>
+      <label>Password<input name="adminPassword" type="password" required /></label>
+      <button class="btn primary" type="submit">Login</button>
+      <p class="tiny" id="admin-status"></p>
+    </form>
+
+    <div id="admin-panel" class="admin hidden">
+      <div class="admin-nav">
+        <button data-tab="members" class="active">Members</button>
+        <button data-tab="programs">Programs</button>
+        <button data-tab="social">Social</button>
+        <button data-tab="sports">Sports</button>
+        <button data-tab="magazine">Magazine</button>
+        <button data-tab="announcements">Announcements</button>
+      </div>
+
+      <div class="admin-tab" data-tab-content="members">
+        <div class="toolbar">
+          <input id="filter-interest" placeholder="Filter by interest (e.g., Cooking)" />
+          <button id="download-members" class="btn ghost">Download CSV</button>
+        </div>
+        <div class="table-wrap" id="members-table-wrap"></div>
+      </div>
+
+      <div class="admin-tab hidden" data-tab-content="programs">
+        <form id="program-form" class="form inline">
+          <input name="title" placeholder="Program" required />
+          <input name="year" placeholder="Year" required />
+          <input name="description" placeholder="Description" required />
+          <input name="folderId" placeholder="Drive Folder ID" />
+          <button class="btn primary" type="submit">Save Program</button>
+        </form>
+        <div id="program-list" class="list"></div>
+      </div>
+
+      <div class="admin-tab hidden" data-tab-content="social">
+        <form id="social-form" class="form inline">
+          <input name="title" placeholder="Initiative" required />
+          <input name="year" placeholder="Year" required />
+          <input name="description" placeholder="Description" required />
+          <input name="folderId" placeholder="Drive Folder ID" />
+          <button class="btn primary" type="submit">Save Initiative</button>
+        </form>
+        <div id="social-list" class="list"></div>
+      </div>
+
+      <div class="admin-tab hidden" data-tab-content="sports">
+        <form id="sports-form" class="form inline">
+          <input name="year" placeholder="Year" required />
+          <input name="winner" placeholder="Winner" required />
+          <input name="runner" placeholder="Runner-up" required />
+          <input name="score" placeholder="Score / Highlights" required />
+          <input name="folderId" placeholder="Drive Folder ID" />
+          <button class="btn primary" type="submit">Save Result</button>
+        </form>
+        <div id="sports-list" class="list"></div>
+      </div>
+
+      <div class="admin-tab hidden" data-tab-content="magazine">
+        <form id="magazine-form" class="form inline">
+          <input name="year" placeholder="Year" required />
+          <input name="title" placeholder="Edition Title" required />
+          <input name="editor" placeholder="Editor / Note" required />
+          <input name="pdfId" placeholder="Drive PDF ID" required />
+          <input name="coverId" placeholder="Drive Cover Image ID" required />
+          <button class="btn primary" type="submit">Save Edition</button>
+        </form>
+        <div id="magazine-list" class="list"></div>
+      </div>
+
+      <div class="admin-tab hidden" data-tab-content="announcements">
+        <form id="announcement-form" class="form inline">
+          <input name="message" placeholder="Announcement" required />
+          <input name="link" placeholder="Optional link" />
+          <button class="btn primary" type="submit">Post</button>
+        </form>
+        <div id="announcement-list" class="list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="section-head">
+      <p class="eyebrow">Helpdesk</p>
+      <h2>Contact</h2>
+      <p>Reach us for fresher support, collaboration, or cultural queries.</p>
+    </div>
+    <div class="grid two">
+      <div class="card text">
+        <h3>CURMA Desk</h3>
+        <p>Email: curma@curaj.ac.in</p>
+        <p>Phone: +91-99999-99999</p>
+        <p>Address: Central University of Rajasthan, Bandarsindri, Rajasthan</p>
+      </div>
+      <div class="card text">
+        <h3>Fresher Help</h3>
+        <p>Guidance for arrival, housing, food, and campus life.</p>
+        <p>Join the WhatsApp helpdesk after submitting the fresher form.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> CURMA · Central University of Rajasthan Malayali Association</p>
+    <div class="footer-links">
+      <a href="#byelaw">Bye-law</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
