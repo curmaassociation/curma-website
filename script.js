@@ -1,5 +1,5 @@
 // Frontend logic for CURMA site. Replace API_BASE with your deployed Google Apps Script Web App URL.
-const API_BASE = "https://script.google.com/macros/s/AKfycbxpQFTZz2sYuL0gjKXMDAE8ljA-4Ovml0SI_X5w6Hgt2-g3PTkvN7W301jKHYixfFAI/exec";
+const API_BASE = "https://script.google.com/macros/s/AKfycbx4T9cVmCCqSTH1_WyulyegZklQshOX7sXYdUcmxwmwN4s3gH3p-B1RPiXHOhsRFG5j/exec";
 
 const sampleAnnouncements = [
   { message: "Onam auditions start next week", link: "#programs" },
@@ -270,3 +270,4 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", init);
+
